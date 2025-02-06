@@ -11,7 +11,7 @@ CREATE USER bookadmin IDENTIFIED BY 'book2025';
 GRANT ALL PRIVILEGES ON book_database.Book TO bookadmin;  
 
 Use default port 3306  
-/////////////////////////////////////////////////  
+//////////////////////////////////////////////////  
 
 Instructions for running the server  
 
