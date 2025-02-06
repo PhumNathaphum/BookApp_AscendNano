@@ -25,6 +25,9 @@ Instructions for running the server
 
 Integration tests  
 
+2.cd [repository] 
+mvn test
+
 //////////////////////////////////////////////////  
 
 Example API  
