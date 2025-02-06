@@ -26,7 +26,6 @@ public class ValidationErrorHandler {
         });
 
         Map<String, Object> body = new HashMap<>();
-        body.put("timestamp", System.currentTimeMillis());
         body.put("status", HttpStatus.BAD_REQUEST.value());
         body.put("error", "Bad Request");
         body.put("message", "Validation failed");
