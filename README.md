@@ -33,7 +33,7 @@ Request : GET /books?author=JohnDoe
 
 Respond :  
 {
-    "status": "200",  
+    "status": 200,  
     "desc": "Search success",  
     "data": [  
         {  
@@ -63,7 +63,7 @@ Request : POST /books
 
 Respond :  
 {  
-    "status": "201",  
+    "status": 201,  
     "desc": "Create success",  
     "data": null,  
     "book": {  
@@ -125,7 +125,7 @@ Request : POST /books
 
 Respond :  
 {  
-    "status": "400",  
+    "status": 400,  
     "desc": "Error : publishedDate is invalid",  
     "data": null,  
     "book": null  
