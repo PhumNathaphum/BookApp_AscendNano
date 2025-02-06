@@ -25,8 +25,8 @@ Instructions for running the server
 
 Integration tests  
 
-2.cd [repository] 
-mvn test
+1.cd [repository]    
+2.mvn test   
 
 //////////////////////////////////////////////////  
 
