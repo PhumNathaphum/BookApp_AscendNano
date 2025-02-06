@@ -6,7 +6,7 @@ Run these sql lines :
 
 CREATE DATABASE book_database;  
 USE book_database;  
-CREATE TABLE Book (id int NOT NULL AUTO_INCREMENT, title varchar(255), author varchar(255), publishedDate date, PRIMARY KEY (id));  
+CREATE TABLE Book (id int NOT NULL AUTO_INCREMENT, title varchar(255) NOT NULL, author varchar(255) NOT NULL, published_date date, PRIMARY KEY (id));  
 CREATE USER bookadmin IDENTIFIED BY 'book2025';  
 GRANT ALL PRIVILEGES ON book_database.Book TO bookadmin;  
 
@@ -33,7 +33,7 @@ Request : GET /books?author=JohnDoe
 
 Respond :  
 {
-    "status": "200",  
+    "status": 200,  
     "desc": "Search success",  
     "data": [  
         {  
@@ -63,7 +63,7 @@ Request : POST /books
 
 Respond :  
 {  
-    "status": "201",  
+    "status": 201,  
     "desc": "Create success",  
     "data": null,  
     "book": {  
@@ -125,7 +125,7 @@ Request : POST /books
 
 Respond :  
 {  
-    "status": "400",  
+    "status": 400,  
     "desc": "Error : publishedDate is invalid",  
     "data": null,  
     "book": null  
