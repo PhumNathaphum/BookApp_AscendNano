@@ -1,21 +1,21 @@
 /////////////////////////////////////////////////
 
-setup database MySQL
+setup database MySQL  
 
-Run these sql lines :
+Run these sql lines :  
 
-CREATE DATABASE book_database;
-USE book_database;
-CREATE TABLE Book (id int NOT NULL AUTO_INCREMENT, title varchar(255), author varchar(255), publishedDate date, PRIMARY KEY (id));
-CREATE USER bookadmin IDENTIFIED BY 'book2025';
-GRANT ALL PRIVILEGES ON book_database.Book TO bookadmin;
+CREATE DATABASE book_database;  
+USE book_database;  
+CREATE TABLE Book (id int NOT NULL AUTO_INCREMENT, title varchar(255), author varchar(255), publishedDate date, PRIMARY KEY (id));  
+CREATE USER bookadmin IDENTIFIED BY 'book2025';  
+GRANT ALL PRIVILEGES ON book_database.Book TO bookadmin;  
 
-Use default port 3306
-/////////////////////////////////////////////////
+Use default port 3306  
+/////////////////////////////////////////////////  
 
-Instructions for running the server
+Instructions for running the server  
 
-1.git clone https://github.com/PhumNathaphum/BookApp_AscendNano.git
+1.git clone https://github.com/PhumNathaphum/BookApp_AscendNano.git  
 2.cd [repository]
 3.Check java version (17.0.10)
 4.Check Maven version (Apache Maven 3.8.8)
