@@ -26,7 +26,7 @@ public class Book {
 	@NotBlank(message = "author must not be empty")
 	@Column(name = "author")
 	private String author;
-	@Column(name = "publishedDate")
+	@Column(name = "published_date")
 	private LocalDate publishedDate;
 	
 	public Book(int id, String title, String author, LocalDate publishedDate) {
