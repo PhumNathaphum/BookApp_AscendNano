@@ -6,7 +6,7 @@ Run these sql lines :
 
 CREATE DATABASE book_database;  
 USE book_database;  
-CREATE TABLE Book (id int NOT NULL AUTO_INCREMENT, title varchar(255), author varchar(255), publishedDate date, PRIMARY KEY (id));  
+CREATE TABLE Book (id int NOT NULL AUTO_INCREMENT, title varchar(255), author varchar(255), published_date date, PRIMARY KEY (id));  
 CREATE USER bookadmin IDENTIFIED BY 'book2025';  
 GRANT ALL PRIVILEGES ON book_database.Book TO bookadmin;  
 
