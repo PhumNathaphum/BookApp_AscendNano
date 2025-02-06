@@ -5,15 +5,16 @@ import java.util.List;
 import com.web.bookapp.book.Book;
 
 public class BookRespond {
-	private String status;
+	private int status;
 	private String desc;
 	private List<Book> data;
 	private Book book;
 	
-	public String getStatus() {
+	
+	public int getStatus() {
 		return status;
 	}
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 	public String getDesc() {
@@ -28,7 +29,7 @@ public class BookRespond {
 	public void setData(List<Book> data) {
 		this.data = data;
 	}
-	public BookRespond(String status, String desc) {
+	public BookRespond(int status, String desc) {
 		this.status = status;
 		this.desc = desc;
 	}

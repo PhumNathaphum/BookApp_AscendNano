@@ -21,7 +21,7 @@ public class BookService {
 	}
 
 	public ResponseEntity<BookRespond> getBookByAuthor(String author){
-		BookRespond res = new BookRespond("200",MessageText.SEARCH_SUCCESS);
+		BookRespond res = new BookRespond(200,MessageText.SEARCH_SUCCESS);
 		res.setData(bookRepository.findByAuthor(author));
 		return new ResponseEntity<BookRespond>(res, HttpStatus.OK);
 	}
@@ -29,19 +29,19 @@ public class BookService {
 	public ResponseEntity<BookRespond> saveBook(Book newBook) {
 		//validate published date
 		if(newBook.getPublishedDate().getYear() < 1000) {
-			BookRespond res = new BookRespond("400",MessageText.ERROR_PDATE_INVALID);
+			BookRespond res = new BookRespond(400,MessageText.ERROR_PDATE_INVALID);
 			return new ResponseEntity<BookRespond>(res, HttpStatus.BAD_REQUEST);
 		}
 		if(newBook.getPublishedDate().isAfter(LocalDate.now())) {
 			if(newBook.getPublishedDate().isAfter(LocalDate.now().plusYears(543))){
-				BookRespond res = new BookRespond("400",MessageText.ERROR_PDATE_INVALID);
+				BookRespond res = new BookRespond(400,MessageText.ERROR_PDATE_INVALID);
 				return new ResponseEntity<BookRespond>(res, HttpStatus.BAD_REQUEST);
 			} else {
 				newBook.setPublishedDate(newBook.getPublishedDate().minusYears(543));
 			}
 		}
 		
-		BookRespond res = new BookRespond("201",MessageText.CREATE_SUCCESS);
+		BookRespond res = new BookRespond(201,MessageText.CREATE_SUCCESS);
 		res.setBook(bookRepository.save(newBook));
 		return new ResponseEntity<BookRespond>(res, HttpStatus.CREATED);
 	}
